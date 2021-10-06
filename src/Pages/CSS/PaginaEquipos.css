@@ -1,0 +1,6 @@
+
+.gridEquiposs
+{
+    display: grid;
+    grid-template-rows: 60px 500px;
+}

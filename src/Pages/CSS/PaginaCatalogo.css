@@ -1,0 +1,64 @@
+
+.gridCtaalogo
+{
+    display: grid;
+    grid-template-rows: 60px 600px;
+}
+
+.filtroCtaal
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filtroCtaal ul
+{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.filtroCtaal ul div
+{
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.filtroCtaal ul div a
+{
+    text-decoration: none;
+}
+
+.gridSeparaTitulo
+{
+    display: grid;
+    grid-template-rows: 30px 580px;
+}
+
+.tamañoTitulo div
+{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.separarGrid
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 25px;
+}
+
+.quitarFiltro
+{
+    background-color: rgb(24, 170, 68);
+    color: white;
+    width: 60px;
+    height: 50px;
+    margin-top: 2px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+

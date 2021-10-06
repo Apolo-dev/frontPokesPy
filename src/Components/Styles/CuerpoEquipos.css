@@ -1,0 +1,7 @@
+
+.gridCuerpazo
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 330px 330px;
+}

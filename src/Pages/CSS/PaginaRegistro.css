@@ -1,0 +1,17 @@
+
+.gridRegis
+{
+    display: grid;
+    grid-template-columns: 33% 25% 35%;
+    
+}
+
+
+.cuerpoFormm
+{
+    margin-top: 100px;
+    width: 100%;
+    height: 450px;
+    border: 1px solid rgb(228, 226, 226);
+    
+}

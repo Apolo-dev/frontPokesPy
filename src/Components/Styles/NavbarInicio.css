@@ -1,0 +1,36 @@
+.contenedornav 
+{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background-color: black;
+    
+}
+
+.contenedornav ul
+{
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.contenedornav ul li
+{
+    list-style: none;
+    margin-top: 15px;
+    
+}
+
+.contenedornav ul li a
+{
+    text-decoration: none;
+    margin-right: 15px;
+    color: white;
+    padding: 10px;   
+}
+
+.contenedornav ul li a:hover
+{
+    color: blue;
+}

@@ -1,0 +1,19 @@
+
+.gridInicial
+{
+    display: grid;
+    grid-template-rows: 60px 600px;
+}
+
+.imgportadaa
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.imgportadaa img
+{
+    width: 30%;
+    height: 200px;
+}
