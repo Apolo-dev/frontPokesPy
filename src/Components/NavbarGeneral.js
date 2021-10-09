@@ -8,6 +8,9 @@ const NavbarGeneral = () => {
         <div className="naviigenerall">
             <ul>
                 <li>
+                    <Link to="/portada">Portada</Link>
+                </li>
+                <li>
                     <Link to="/catalogo">Catalogo</Link>
                 </li>
                 <li>

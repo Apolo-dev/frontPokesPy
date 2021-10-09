@@ -1,0 +1,59 @@
+
+.gridPortada
+{
+    display: grid;
+    grid-template-rows: 60px 550px;
+}
+
+.gridSEparaPortada
+{
+    display: grid;
+    grid-template-rows: 140px 390px;
+}
+
+.GridseparaTitPortada
+{
+    display: grid;
+    grid-template-columns: 15% 55% 25%;
+}
+
+.tamñoTii
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tamñoTii img
+{
+    width: 240px;
+    height: 150px;
+    
+}
+
+.estilodFiltroPortada
+{
+    margin-top: 50px;
+}
+
+
+.mosaico
+{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 150px 150px 150px 150px ;
+    margin: 15px;
+}
+
+.tamañoImagenMosaico
+{
+    border: 1px solid rgb(218, 216, 216);
+}
+
+.tamañoImagenMosaico img
+{
+    width: 100%;
+    height: 100%;
+}

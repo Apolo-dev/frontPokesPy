@@ -1,0 +1,23 @@
+.generalFiltroPortada label
+{
+    margin-right: 15px;
+}
+
+
+
+
+
+.TamañoFilt
+{
+    width: 50%;
+    height: 40px;
+    background-color: rgb(233, 232, 232);
+    color: rgb(64, 104, 141);
+    cursor: pointer;
+    
+}
+
+.option
+{
+    cursor: pointer;
+}
