@@ -4,11 +4,13 @@ import NavbarGeneral from '../Components/NavbarGeneral'
 import './CSS/PaginaCatalogo.css'
 import BuscadorCatalogo from '../Components/BuscadorCatalogo'
 import BotonFiltros from '../Components/BotonFiltros'
+import CuerpoAtaques from '../Components/CuerpoAtaques'
 
 
 const PaginaCatalogo = () => {
 
     const [poke, setPoke] = useState([])
+    const [ataque, setAtaque] = useState([])
 
     const [lista, setLista] = useState(false)
 
@@ -16,7 +18,7 @@ const PaginaCatalogo = () => {
 
     // hago el fetch general 
 
-    const APIURL = 'http://127.0.0.1:8000/api/pokemons/'
+    const APIURL = 'http://127.0.0.1:8000/api/attacks/'
 
     const getPokemon = async ()=>
     {
@@ -25,8 +27,11 @@ const PaginaCatalogo = () => {
             const res = await fetch(APIURL)
             const data = await res.json()
             const {pokemons} = data
+            const {ataques} = data
             console.log(pokemons);
+            console.log(ataques);
             setPoke(pokemons)
+            setAtaque(ataques)
         }catch(error)
         {
             console.log(error);
@@ -49,17 +54,17 @@ const PaginaCatalogo = () => {
 
     const fuego = poke.filter((element)=>
     {
-        return element.pokemon_type === 'Fuego'
+        return element.tipe_pokemon === 'Fuego'
     })
 
     const dragon = poke.filter((element)=>
     {
-        return element.pokemon_type === 'Dragon'
+        return element.tipe_pokemon === 'Dragon'
     })
 
     const tierra = poke.filter((element)=>
     {
-        return element.pokemon_type === 'Tierra'
+        return element.tipe_pokemon === 'Tierra'
     })
 
     const handleClickLista = (e)=>
@@ -124,6 +129,7 @@ const PaginaCatalogo = () => {
                             </div>
                         ))}
                 </div>
+                
             </div>
             </div>
         </div>

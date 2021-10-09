@@ -27,8 +27,8 @@ const CuerpoCatalogo = ({pokemon}) => {
                     <img src={Groudon} alt="poke" />
             </div>
             <ul className="detallitos">
-                <li className="NombrePoke">{pokemon.pokemon_name}</li>
-                <li><strong>Genero:</strong> {pokemon.pokemon_type}</li>
+                <li className="NombrePoke">{pokemon.name_pokemon}</li>
+                <li><strong>Genero:</strong> {pokemon.tipe_pokemon}</li>
                 <li><strong>Ataques:</strong><button className="botnListaAtaques" onClick={handleClickLista}>Lista de Ataques</button>
                     {lista &&
                         <div className="moverLiataAtaques">
