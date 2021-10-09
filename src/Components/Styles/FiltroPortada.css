@@ -4,9 +4,6 @@
 }
 
 
-
-
-
 .TamañoFilt
 {
     width: 50%;
@@ -26,7 +23,7 @@
 .estilosCaja 
 {
     border: 1px solid rgb(226, 226, 226);
-    width: 40%;
+    width: 60%;
     height: 30px;
     cursor: pointer;
     background-color: rgb(3, 3, 48);

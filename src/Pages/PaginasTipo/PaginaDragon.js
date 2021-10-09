@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
@@ -7,6 +7,26 @@ import Logo from '../../Images/logo.jpg'
 import BadgePokemon from '../../Components/BadgePokemon'
 
 const PaginaDragon = () => {
+
+    const ApiURL = 'http://127.0.0.1:8000/api/pokemons/dragon/'
+    const getPokemon = async ()=>
+    {
+        try
+        {
+            const res = await fetch(ApiURL)
+            const data = await res.json()
+            const {pokemonDragon} = data
+            console.log(pokemonDragon);
+        }catch(error)
+        {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>
+    {
+        getPokemon()
+    }, [])
 
     const pokemon = [
         {
@@ -47,7 +67,7 @@ const PaginaDragon = () => {
                     <div className="gridBadges">
                         {pokemon.map((element)=>
                         {
-                            return <div>
+                            return <div  key={element.id}>
                                 <BadgePokemon
                                 pokemon = {element}
                                 
