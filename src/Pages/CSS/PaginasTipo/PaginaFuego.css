@@ -1,0 +1,19 @@
+
+.gridFuego
+{
+    display: grid;
+    grid-template-rows: 60px 600px;
+}
+
+.separaariCuerpo
+{
+    display: grid;
+    grid-template-rows: 140px 390px;
+}
+
+.gridBadges
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 250px 250px;
+}

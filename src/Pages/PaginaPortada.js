@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import NavbarGeneral from '../Components/NavbarGeneral'
 import './CSS/PaginaPortada.css'
 
@@ -26,6 +26,14 @@ import Feraligator from '../Images/Feraligator.jpg'
 import Flygon from '../Images/Flygon.jpg'
 import Gengar from '../Images/Gengar.jpg'
 import Golem from '../Images/Golem.jpg'
+import Gyarados from '../Images/Gyarados.jpg'
+import Hariyama from '../Images/Hariyama.jpg'
+import Lugia from '../Images/Lugia.jpg'
+import Machamp from '../Images/Machamp.jpg'
+import Mewtwo from '../Images/Mewtwo.jpg'
+import Raikou from '../Images/Raikou.jpg'
+
+
 
 import Logo from '../Images/logo.jpg'
 import FiltroPortada from '../Components/FiltroPortada'
@@ -34,6 +42,21 @@ import FiltroPortada from '../Components/FiltroPortada'
 
 
 const PaginaPortada = () => {
+
+    const [filtro, setFiltro] = useState(false)
+
+    const handleClickBoton = ()=>
+    {
+        setFiltro(!filtro)
+    }
+
+    const handleClick = ()=>
+    {
+        
+    }
+
+
+
     return (
         <div className="gridPortada">
             <div>
@@ -48,7 +71,11 @@ const PaginaPortada = () => {
                         <img src={Logo} alt="logo" />
                     </div>
                     <div className="estilodFiltroPortada">
-                        <FiltroPortada />
+                        <FiltroPortada
+                        filtro = {filtro}
+                        handleClick={handleClick}
+                        handleClickBoton={handleClickBoton}
+                        />
                     </div>
                 </div>
                 <div className="mosaico">
@@ -123,6 +150,24 @@ const PaginaPortada = () => {
                     </div>
                     <div className="tamañoImagenMosaico">
                         <img src={Golem} alt="Golem" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Gyarados} alt="Gyarados" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Hariyama} alt="Hariyama" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Lugia} alt="Lugia" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Machamp} alt="Machamp" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Mewtwo} alt="Mewtwo" />
+                    </div>
+                    <div className="tamañoImagenMosaico">
+                        <img src={Raikou} alt="Raikou" />
                     </div>
                 </div>
             </div>

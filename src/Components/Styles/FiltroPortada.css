@@ -11,8 +11,8 @@
 {
     width: 50%;
     height: 40px;
-    background-color: rgb(233, 232, 232);
-    color: rgb(64, 104, 141);
+    background-color: rgb(19, 92, 134);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     
 }
@@ -20,4 +20,32 @@
 .option
 {
     cursor: pointer;
+}
+
+
+.estilosCaja 
+{
+    border: 1px solid rgb(226, 226, 226);
+    width: 40%;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(3, 3, 48);
+}
+
+.estilosCaja h2
+{
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.absolutLista
+{
+    background-color: rgb(39, 91, 126);
+    opacity: 0.8;
+}
+
+.absolutLista div
+{
+    color: rgb(240, 240, 240);
 }
