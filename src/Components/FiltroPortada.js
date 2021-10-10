@@ -1,23 +1,10 @@
 import React from 'react'
 import './Styles/FiltroPortada.css'
 
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const FiltroPortada = ({filtro, handleClick, handleClickBoton}) => {
-
-    const Tipos = 
-    [
-        {id:1, texto:'Fuego'},
-        {id:2, texto:'Dragon'},
-        {id:3, texto:'Agua'},
-        {id:4, texto:'Electrico'},
-        {id:5, texto:'Tierra'},
-        {id:6, texto:'Psiquico'},
-        {id:7, texto:'Lucha'},
-        {id:8, texto:'Hielo'},
-        {id:9, texto:'Volador'},
-        {id:10, texto:'Legendario'},
-    ]
+const FiltroPortada = ({filtro, handleClickBoton}) => {
+    
 
     return (
         <div className="generalFiltroPortada">
@@ -29,18 +16,20 @@ const FiltroPortada = ({filtro, handleClick, handleClickBoton}) => {
             {
                 filtro &&
                     <div className="absolutLista">
-                        {Tipos.map((element)=>
-                        {
-                            return <div className="botonesListtaaa"
-                            onClick = {handleClick}
-                            key={element.id}
-                            data-valor = {element.texto}
-                            >
-
-                                {element.texto}
-                            </div>
-
-                        })}
+                        <ul>
+                            <li>
+                                <Link to="portada/fuego">Fuego</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/dragon">Dragon</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/hielo">Hielo</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/tierra">Tierra</Link>
+                            </li>
+                        </ul>
                     </div>
 
 

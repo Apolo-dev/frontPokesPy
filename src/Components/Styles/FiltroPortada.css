@@ -42,7 +42,15 @@
     opacity: 0.8;
 }
 
-.absolutLista div
+.absolutLista ul
 {
-    color: rgb(240, 240, 240);
+    list-style: none;
+    width: 180px;
+}
+
+
+.absolutLista ul li a
+{
+    color: white;
+    text-decoration: none;
 }

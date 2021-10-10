@@ -16,7 +16,9 @@ const PaginaDragon = () => {
             const res = await fetch(ApiURL)
             const data = await res.json()
             const {pokemonDragon} = data
+            const {ataques} = data
             console.log(pokemonDragon);
+            console.log(ataques);
         }catch(error)
         {
             console.log(error);
@@ -67,7 +69,7 @@ const PaginaDragon = () => {
                     <div className="gridBadges">
                         {pokemon.map((element)=>
                         {
-                            return <div  key={element.id}>
+                            return <div key={element.nombre}>
                                 <BadgePokemon
                                 pokemon = {element}
                                 
