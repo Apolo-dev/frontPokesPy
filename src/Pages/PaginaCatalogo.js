@@ -4,7 +4,7 @@ import NavbarGeneral from '../Components/NavbarGeneral'
 import './CSS/PaginaCatalogo.css'
 import BuscadorCatalogo from '../Components/BuscadorCatalogo'
 import BotonFiltros from '../Components/BotonFiltros'
-import CuerpoAtaques from '../Components/CuerpoAtaques'
+//import CuerpoAtaques from '../Components/CuerpoAtaques'
 
 
 const PaginaCatalogo = () => {

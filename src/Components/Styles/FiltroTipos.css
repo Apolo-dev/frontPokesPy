@@ -1,0 +1,43 @@
+
+.cajaFiltroTipos
+{
+    border: 1px solid black;
+    width: 60%;
+    height: 30px;
+    background-color: rgb(11, 11, 80);
+    cursor: pointer;
+}
+
+.cajaFiltroTipos h2
+{
+    color: white;
+}
+
+.conteListaTipos
+{
+    background-color: yellowgreen;
+    width: 180px;
+    
+}
+
+.conteListaTipos ul li
+{
+    list-style: none;
+
+}
+
+.conteListaTipos ul li:hover
+{
+    background-color: blueviolet;
+}
+
+.conteListaTipos ul li a
+{
+    text-decoration: none;
+}
+
+.conteListaTipos ul li a:hover
+{
+    color: white;
+}
+

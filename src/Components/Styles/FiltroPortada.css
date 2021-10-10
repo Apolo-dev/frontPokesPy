@@ -4,6 +4,8 @@
 }
 
 
+
+
 .TamañoFilt
 {
     width: 50%;
@@ -29,6 +31,11 @@
     background-color: rgb(3, 3, 48);
 }
 
+.estilosCaja:hover
+{
+    background-color: salmon;
+} 
+
 .estilosCaja h2
 {
     color: white;
@@ -46,6 +53,11 @@
 {
     list-style: none;
     width: 180px;
+}
+
+.absolutLista ul li:hover
+{
+    background-color: rgb(226, 10, 10);
 }
 
 

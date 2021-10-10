@@ -29,6 +29,9 @@ const FiltroPortada = ({filtro, handleClickBoton}) => {
                             <li>
                                 <Link to="portada/tierra">Tierra</Link>
                             </li>
+                            <li>
+                                <Link to="portada/electrico">Electrico</Link>
+                            </li>
                         </ul>
                     </div>
 

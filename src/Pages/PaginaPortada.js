@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import NavbarGeneral from '../Components/NavbarGeneral'
 import './CSS/PaginaPortada.css'
 

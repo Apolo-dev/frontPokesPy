@@ -2,9 +2,9 @@ import React from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
-import FiltroPortada from '../../Components/FiltroPortada'
 import Logo from '../../Images/logo.jpg'
 import BadgePokemon from '../../Components/BadgePokemon'
+import FiltroTipos from '../../Components/FiltroTipos'
 
 const PaginaHielo = () => {
 
@@ -40,7 +40,7 @@ const PaginaHielo = () => {
                         <img src={Logo} alt="logo" />
                     </div>
                     <div className="estilodFiltroPortada">
-                        <FiltroPortada />
+                        <FiltroTipos />
                     </div>
                 </div>
                 <div>

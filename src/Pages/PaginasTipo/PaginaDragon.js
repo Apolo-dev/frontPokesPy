@@ -1,12 +1,15 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
-import FiltroPortada from '../../Components/FiltroPortada'
 import Logo from '../../Images/logo.jpg'
 import BadgePokemon from '../../Components/BadgePokemon'
+import FiltroTipos from '../../Components/FiltroTipos'
 
 const PaginaDragon = () => {
+
+    const [pokemonDragon, setPokemonDragon] = useState([])
+    const [ataque, setAtaque] = useState([])
 
     const ApiURL = 'http://127.0.0.1:8000/api/pokemons/dragon/'
     const getPokemon = async ()=>
@@ -19,6 +22,8 @@ const PaginaDragon = () => {
             const {ataques} = data
             console.log(pokemonDragon);
             console.log(ataques);
+            setPokemonDragon(pokemonDragon)
+            setAtaque(ataques)
         }catch(error)
         {
             console.log(error);
@@ -32,7 +37,7 @@ const PaginaDragon = () => {
 
     const pokemon = [
         {
-            nombre: 'Charizard',
+            nombre: 'Charizard', 
             tipo: 'Fuego'
         },
         {
@@ -43,7 +48,18 @@ const PaginaDragon = () => {
             nombre: 'Lugia',
             tipo: 'Agua'
         },
+        {
+            nombre: 'perro',
+            tipo: 'buenaonado'
+        },
 
+    ]
+
+    const listaAtaques = [
+        {id: 1, nombre: 'lansallamas'},
+        {id: 2, nombre: 'ataque Ala'},
+        {id: 3, nombre: 'eco'},
+        {id: 4, nombre: 'hidrobomba'},
     ]
 
 
@@ -62,22 +78,22 @@ const PaginaDragon = () => {
                         <img src={Logo} alt="logo" />
                     </div>
                     <div className="estilodFiltroPortada">
-                        <FiltroPortada />
+                        <FiltroTipos />
                     </div>
                 </div>
                 <div>
                     <div className="gridBadges">
-                        {pokemon.map((element)=>
+                        {pokemonDragon.map((element)=>
                         {
-                            return <div key={element.nombre}>
+                            return <div key={element.id} className="separaBadges">
                                 <BadgePokemon
                                 pokemon = {element}
+                                ataque={listaAtaques}
                                 
-                                />
+                                /> 
                             </div>
                         })}
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
         </div>

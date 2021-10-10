@@ -8,12 +8,18 @@
 .separaariCuerpo
 {
     display: grid;
-    grid-template-rows: 140px 390px;
+    grid-template-rows: 130px 390px;
 }
 
 .gridBadges
 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 250px 250px;
+    grid-template-rows: 270px 270px;
+    margin: 15px;
+}
+
+.separaBadges
+{
+    margin: 15px;
 }
