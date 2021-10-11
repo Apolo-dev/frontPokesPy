@@ -20,10 +20,16 @@ const PaginaDragon = () => {
             const data = await res.json()
             const {pokemonDragon} = data
             const {ataques} = data
-            console.log(pokemonDragon);
-            console.log(ataques);
+            const resu = ataques.map((element)=>
+            {
+                return element.ataqueAltaria
+            })
+        
+            //console.log(pokemonDragon);
+            //console.log(ataques);
+            console.log(resu);
             setPokemonDragon(pokemonDragon)
-            setAtaque(ataques)
+            setAtaque(resu)
         }catch(error)
         {
             console.log(error);
@@ -35,33 +41,51 @@ const PaginaDragon = () => {
         getPokemon()
     }, [])
 
-    const pokemon = [
-        {
-            nombre: 'Charizard', 
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Entei',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Lugia',
-            tipo: 'Agua'
-        },
-        {
-            nombre: 'perro',
-            tipo: 'buenaonado'
-        },
+    const listaNormal = [
+        {id: 1, nombre: 'pico'},
+        {id: 2, nombre: 'nada'},
+        {id: 3, nombre: 'poto'},
+        {id: 4, nombre: 'pussy'},
+    ]
+        
+    
+
+
+
+    const ataquesPoke = [
+        [
+            {id: 1, nombre: 'lansallamas'},
+            {id: 2, nombre: 'ataque Ala'},
+            {id: 3, nombre: 'llamarada'},
+            {id: 4, nombre: 'ascuas'},
+        ],
+    
+        [
+            {id: 1, nombre: 'hidrobomba'},
+            {id: 2, nombre: 'surf'},
+            {id: 3, nombre: 'megaRio'},
+            {id: 4, nombre: 'cascada'},
+        ],
+    
+        [
+            {id:1, nombre: 'rayo'},
+            {id: 2, nombre: 'sobrecarga'},
+            {id: 3, nombre: 'eco'},
+            {id: 4, nombre: 'gigavoltio'},
+        ]
 
     ]
 
-    const listaAtaques = [
-        {id: 1, nombre: 'lansallamas'},
-        {id: 2, nombre: 'ataque Ala'},
-        {id: 3, nombre: 'eco'},
-        {id: 4, nombre: 'hidrobomba'},
-    ]
+    const mapeo = ataquesPoke.map((element)=>
+    {
+        return element
+    })
 
+    useEffect(()=>
+    {
+        //console.log(ataquesPoke);
+        console.log(listaNormal);
+    })
 
 
     return (
@@ -88,7 +112,7 @@ const PaginaDragon = () => {
                             return <div key={element.id} className="separaBadges">
                                 <BadgePokemon
                                 pokemon = {element}
-                                ataque={listaAtaques}
+                                ataque={listaNormal}
                                 
                                 /> 
                             </div>
