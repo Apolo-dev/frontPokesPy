@@ -1,0 +1,59 @@
+
+.gridsidemini
+{
+    display: grid;
+    grid-template-rows: 60px 690px;
+    background-color: rgb(243, 244, 247);
+}
+
+.gridseparacuerposide
+{
+    display: grid;
+    grid-template-rows: 90px 600px;
+}
+
+.gridPokesBataalla
+{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.gridPokesBataalla div
+{
+    border: 1px solid rgb(197, 195, 195);
+}
+
+.gridseparrafotocuerpo
+{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    cursor: pointer;
+}
+
+.gridseparrafotocuerpo:hover
+{
+    border: 3px solid rgb(104, 5, 196);
+    
+}
+
+
+
+.gridMiniSEPA
+{
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+.tamImGENbATCH img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.formatoTituloSide
+{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25px;
+    
+}

@@ -11,10 +11,10 @@ const NavbarGeneral = () => {
                     <Link to="/portada">Portada</Link>
                 </li>
                 <li>
-                    <Link to="/catalogo">Catalogo</Link>
+                    <Link to="/equipos">Mi Equipo</Link>
                 </li>
                 <li>
-                    <Link to="/equipos">Mi Equipo</Link>
+                    <Link to="/batalla">Batalla</Link>
                 </li>
                 <li>
                     <Link to="/">Cerrar Sesion</Link>

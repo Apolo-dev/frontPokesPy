@@ -15,6 +15,7 @@ import PaginaPsiquico from './Pages/PaginasTipo/PaginaPsiquico';
 import PaginaAgua from './Pages/PaginasTipo/PaginaAgua';
 import PaginaLucha from './Pages/PaginasTipo/PaginaLucha';
 import PaginaVolador from './Pages/PaginasTipo/PaginaVolador';
+import PaginaBatalla from './Pages/PaginaBatalla';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/registro" component={PaginaRegistro} />
         <Route exact path="/catalogo" component={PaginaCatalogo} />
         <Route exact path="/equipos" component={PaginaEquipos} />
+        <Route exact path="/batalla" component={PaginaBatalla} />
         <Route exact path="/portada" component={PaginaPortada} />
         <Route exact path="/portada/fuego" component={PaginaFuego} />
         <Route exact path="/portada/dragon" component={PaginaDragon} />
