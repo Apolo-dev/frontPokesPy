@@ -1,5 +1,7 @@
 import React from 'react'
 import './Styles/SidebarBatalla.css'
+import { Link } from 'react-router-dom'
+
 
 import Lugia from '../Images/Lugia.jpg'
 import Hitmonchan from '../Images/Hitmonchan.jpg'
@@ -16,7 +18,7 @@ const SidebarBatalla = () => {
                     minimenu
                 </div>
                 <div>
-                    boton cerrar
+                    <div><Link to="portada">volver a la portada</Link></div>
                 </div>
             </div>
             <div className="gridseparacuerposide">

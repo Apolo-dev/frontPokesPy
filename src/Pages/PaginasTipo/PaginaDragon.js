@@ -5,6 +5,7 @@ import '../CSS/PaginasTipo/PaginaFuego.css'
 import Logo from '../../Images/logo.jpg'
 import BadgePokemon from '../../Components/BadgePokemon'
 import FiltroTipos from '../../Components/FiltroTipos'
+import BadgeAtaques from '../../Components/BadgeAtaques'
 
 const PaginaDragon = () => {
 
@@ -20,16 +21,15 @@ const PaginaDragon = () => {
             const data = await res.json()
             const {pokemonDragon} = data
             const {ataques} = data
-            const resu = ataques.map((element)=>
+            const ataquesFinal = ataques.map((element)=>
             {
-                return element.ataqueAltaria
+                return element.at
             })
-        
             //console.log(pokemonDragon);
             //console.log(ataques);
-            console.log(resu);
+            //console.log(ataques);
             setPokemonDragon(pokemonDragon)
-            setAtaque(resu)
+            setAtaque(ataquesFinal)
         }catch(error)
         {
             console.log(error);
@@ -42,51 +42,15 @@ const PaginaDragon = () => {
     }, [])
 
     const listaNormal = [
-        {id: 1, nombre: 'pico'},
-        {id: 2, nombre: 'nada'},
-        {id: 3, nombre: 'poto'},
-        {id: 4, nombre: 'pussy'},
+        {id: 1, nombre: 'chari', tipo:'fuego'},
+        {id: 2, nombre: 'lugi', tipo:'agua'},
     ]
         
+
+
     
-
-
-
-    const ataquesPoke = [
-        [
-            {id: 1, nombre: 'lansallamas'},
-            {id: 2, nombre: 'ataque Ala'},
-            {id: 3, nombre: 'llamarada'},
-            {id: 4, nombre: 'ascuas'},
-        ],
     
-        [
-            {id: 1, nombre: 'hidrobomba'},
-            {id: 2, nombre: 'surf'},
-            {id: 3, nombre: 'megaRio'},
-            {id: 4, nombre: 'cascada'},
-        ],
     
-        [
-            {id:1, nombre: 'rayo'},
-            {id: 2, nombre: 'sobrecarga'},
-            {id: 3, nombre: 'eco'},
-            {id: 4, nombre: 'gigavoltio'},
-        ]
-
-    ]
-
-    const mapeo = ataquesPoke.map((element)=>
-    {
-        return element
-    })
-
-    useEffect(()=>
-    {
-        //console.log(ataquesPoke);
-        console.log(listaNormal);
-    })
-
 
     return (
         <div className="gridFuego">
@@ -107,12 +71,12 @@ const PaginaDragon = () => {
                 </div>
                 <div>
                     <div className="gridBadges">
-                        {pokemonDragon.map((element)=>
+                        {ataque.map((element)=>
                         {
                             return <div key={element.id} className="separaBadges">
                                 <BadgePokemon
-                                pokemon = {element}
-                                ataque={listaNormal}
+                                pokemon = {listaNormal}
+                                ataque={element}
                                 
                                 /> 
                             </div>
