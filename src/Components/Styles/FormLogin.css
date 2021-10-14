@@ -1,0 +1,52 @@
+
+.generalFormLogin
+{
+    border: 1px solid rgb(223, 222, 222);
+    width: 100%;
+    height: 320px;
+}
+
+.tituloFormLogin
+{
+    color: blue;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.tituloFormLogin h1
+{
+    font-size: 30px;
+}
+
+.clasFormLogin div
+{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.clasFormLogin div input
+{
+    width: 90%;
+    height: 30px;
+    border: 1px solid rgb(199, 199, 199);   
+}
+
+.botonLogin
+{
+    width: 90%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    border-radius: 10px;
+    border: 1px solid rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+.botonLogin h1
+{
+    font-size: 16px;
+    margin-top: 5px;
+}

@@ -1,0 +1,7 @@
+
+.gridLogin
+{
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    margin-top: 80px;
+}

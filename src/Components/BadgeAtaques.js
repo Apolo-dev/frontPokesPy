@@ -2,8 +2,6 @@ import React from 'react'
 
 const BadgeAtaques = ({ataque}) => {
 
-    const listacualquiera = ['sd', 'sdsdds']
-
 
     return (
         <div>

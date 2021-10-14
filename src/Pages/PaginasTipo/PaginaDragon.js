@@ -44,11 +44,12 @@ const PaginaDragon = () => {
     const listaNormal = [
         {id: 1, nombre: 'chari', tipo:'fuego'},
         {id: 2, nombre: 'lugi', tipo:'agua'},
+        {id: 3, nombre: 'pillito', tipo: 'canino'}
     ]
         
 
 
-    
+
     
     
 

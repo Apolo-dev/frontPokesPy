@@ -1,31 +1,22 @@
 import React, {useState} from 'react'
-import FormRegistro from '../Components/FormRegistro'
-import './CSS/PaginaRegistro.css'
+import FormLogin from '../Components/FormLogin'
+import './CSS/PaginaLogin.css'
 
-const PaginaRegistro = () => {
+const PaginaLogin = () => {
 
-    const [nameUser, setNameUser] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [password2, setPassword2] = useState('')
+
 
     const handleChange = (e)=>
     {
-        if(e.target.name === 'nameUser')
-        {
-            setNameUser(e.target.value)
-        }
-        else if(e.target.name === 'email')
+        if (e.target.name === 'email')
         {
             setEmail(e.target.value)
         }
         else if(e.target.name === 'password')
         {
             setPassword(e.target.value)
-        }
-        else if(e.target.name === 'password2')
-        {
-            setPassword2(e.target.value)
         }
         else
         {
@@ -36,23 +27,20 @@ const PaginaRegistro = () => {
     const handleSubmit = (e)=>
     {
         e.preventDefault()
-        console.log(nameUser, email, password, password2);
+        console.log(email, password);
     }
 
-
     return (
-        <div className="gridRegis">
+        <div className="gridLogin">
             <div>
                 
             </div>
-            <div className="cuerpoFormm">
-                <FormRegistro
-                nameUser = {nameUser}
+            <div>
+                <FormLogin
                 email = {email}
                 password = {password}
-                password2 = {password2}
                 handleChange={handleChange}
-                handleSubmit = {handleSubmit}
+                handleSubmit={handleSubmit}
                 
                 />
             </div>
@@ -63,4 +51,4 @@ const PaginaRegistro = () => {
     )
 }
 
-export default PaginaRegistro
+export default PaginaLogin

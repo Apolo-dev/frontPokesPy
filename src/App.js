@@ -6,6 +6,8 @@ import PaginaRegistro from './Pages/PaginaRegistro';
 import PaginaCatalogo from './Pages/PaginaCatalogo';
 import PaginaEquipos from './Pages/PaginaEquipos';
 import PaginaPortada from './Pages/PaginaPortada';
+import PaginaLogin from './Pages/PaginaLogin';
+
 import PaginaFuego from './Pages/PaginasTipo/PaginaFuego'
 import PaginaDragon from './Pages/PaginasTipo/PaginaDragon';
 import PaginaElectrico from './Pages/PaginasTipo/PaginaElectrico';
@@ -28,6 +30,8 @@ function App() {
         <Route exact path="/equipos" component={PaginaEquipos} />
         <Route exact path="/batalla" component={PaginaBatalla} />
         <Route exact path="/portada" component={PaginaPortada} />
+        <Route exact path="/login" component={PaginaLogin} />
+
         <Route exact path="/portada/fuego" component={PaginaFuego} />
         <Route exact path="/portada/dragon" component={PaginaDragon} />
         <Route exact path="/portada/electrico" component={PaginaElectrico} />

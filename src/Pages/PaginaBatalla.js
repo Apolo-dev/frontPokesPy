@@ -1,19 +1,41 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BadgeBatalla from '../Components/BadgeBatalla'
 import SidebarBatalla from '../Components/SidebarBatalla'
 import './CSS/PaginaBatalla.css'
 
+import Flecha from '../Images/iconoFlecha.png'
+
 const PaginaBatalla = () => {
+
+    // estadoIconoFlecha
+
+    const [icono, setIcono] = useState(false)
+
+    const handleClickFlecha = ()=>
+    {
+        setIcono(!icono)
+    }
+
+
     return (
         <div className="gridBatalla">
             <div className="gridsideb">
-                <div>
-                    <SidebarBatalla />
-                </div>
+                {icono &&
+                    <div>
+                        <SidebarBatalla />
+                    </div>
+                }
+                
             </div>
             <div className="gridCuerpobatalla">
                 <div className="TituloPaginaBatallas">
-                    Batalla lider Camila Agua/Hielo
+                    <div className="tamañoIconoFlecha">
+                        <img src={Flecha} alt="flecha" onClick={handleClickFlecha}/>
+                    </div>
+                    <div>
+                        <h2>Batalla lider Camila Agua/Hielo</h2>
+                    </div>
+                    
                 </div>
                 <div className="gridSeparaCampoBatalla">
                     <div className="gridSepararmensabatch1">
