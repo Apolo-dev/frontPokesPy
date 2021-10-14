@@ -4,25 +4,11 @@ import '../CSS/PaginasTipo/PaginaFuego.css'
 
 import FiltroPortada from '../../Components/FiltroPortada'
 import Logo from '../../Images/logo.jpg'
-import BadgePokemon from '../../Components/BadgePokemon'
+
 
 const PaginaPsiquico = () => {
 
-    const pokemon = [
-        {
-            nombre: 'Charizard',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Entei',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Lugia',
-            tipo: 'Agua'
-        },
-
-    ]
+    
 
 
 
@@ -45,15 +31,7 @@ const PaginaPsiquico = () => {
                 </div>
                 <div>
                     <div className="gridBadges">
-                        {pokemon.map((element)=>
-                        {
-                            return <div>
-                                <BadgePokemon
-                                pokemon = {element}
-                                
-                                />
-                            </div>
-                        })}
+                        olis
                     </div>
                     
                 </div>

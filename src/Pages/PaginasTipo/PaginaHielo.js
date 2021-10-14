@@ -3,26 +3,11 @@ import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
 import Logo from '../../Images/logo.jpg'
-import BadgePokemon from '../../Components/BadgePokemon'
 import FiltroTipos from '../../Components/FiltroTipos'
 
 const PaginaHielo = () => {
 
-    const pokemon = [
-        {
-            nombre: 'Charizard',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Entei',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Lugia',
-            tipo: 'Agua'
-        },
-
-    ]
+    
 
 
 
@@ -45,15 +30,7 @@ const PaginaHielo = () => {
                 </div>
                 <div>
                     <div className="gridBadges">
-                        {pokemon.map((element)=>
-                        {
-                            return <div>
-                                <BadgePokemon
-                                pokemon = {element}
-                                
-                                />
-                            </div>
-                        })}
+                        olis
                     </div>
                     
                 </div>

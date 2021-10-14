@@ -1,48 +1,13 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
 import Logo from '../../Images/logo.jpg'
-import BadgePokemon from '../../Components/BadgePokemon'
 import FiltroTipos from '../../Components/FiltroTipos'
 
 const PaginaFuego = () => {
 
-    const ApiURL = 'http://127.0.0.1:8000/api/pokemons/fuego/'
-    const getPokemon = async ()=>
-    {
-        try
-        {
-            const res = await fetch(ApiURL)
-            const data = await res.json()
-            const {pokemonFuego} = data
-            console.log(pokemonFuego);
-        }catch(error)
-        {
-            console.log(error);
-        }
-    }
 
-    useEffect(()=>
-    {
-        getPokemon()
-    }, [])
-
-    const pokemon = [
-        {
-            nombre: 'Charizard',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Entei',
-            tipo: 'Fuego'
-        },
-        {
-            nombre: 'Lugia',
-            tipo: 'Agua'
-        },
-
-    ]
 
 
 
@@ -65,15 +30,7 @@ const PaginaFuego = () => {
                 </div>
                 <div>
                     <div className="gridBadges">
-                        {pokemon.map((element)=>
-                        {
-                            return <div key={element.id}>
-                                <BadgePokemon
-                                pokemon = {element}
-                                
-                                />
-                            </div>
-                        })}
+                        olis
                     </div>
                     
                 </div>
