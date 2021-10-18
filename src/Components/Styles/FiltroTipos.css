@@ -11,14 +11,23 @@
 .cajaFiltroTipos h2
 {
     color: white;
+    margin-left: 15px;
 }
 
 .conteListaTipos
 {
-    background-color: yellowgreen;
-    width: 180px;
-    
+    background-color: rgb(111, 129, 133);
+    width: 185px;
+    opacity: 0.6;
 }
+
+.conteListaTipos ul
+{
+    margin-left: 15px;
+    width: 150px;
+    cursor: pointer;
+}
+
 
 .conteListaTipos ul li
 {
@@ -28,16 +37,19 @@
 
 .conteListaTipos ul li:hover
 {
-    background-color: blueviolet;
+    background-color: rgb(226, 226, 226);
+    transition: 0.4s;
 }
 
 .conteListaTipos ul li a
 {
     text-decoration: none;
+    color: white;
 }
 
 .conteListaTipos ul li a:hover
 {
     color: white;
+    color: rgb(117, 26, 26);
 }
 

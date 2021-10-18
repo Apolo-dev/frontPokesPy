@@ -34,6 +34,7 @@
 .estilosCaja:hover
 {
     background-color: salmon;
+    
 } 
 
 .estilosCaja h2
@@ -47,12 +48,15 @@
 {
     background-color: rgb(39, 91, 126);
     opacity: 0.8;
+    width: 185px;
+    cursor: pointer;
 }
 
 .absolutLista ul
 {
     list-style: none;
-    width: 180px;
+    width: 155px;
+    margin-left: 15px;
 }
 
 .absolutLista ul li:hover

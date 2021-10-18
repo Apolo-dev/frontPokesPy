@@ -2,14 +2,15 @@ import React, {useState, useEffect} from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
+
 import Logo from '../../Images/logo.jpg'
 import BadgePrincipal from '../../Components/BadgePrincipal'
 import FiltroTipos from '../../Components/FiltroTipos'
 
-const ApiUrl = 'http://127.0.0.1:8000/api/tierra/'
+const ApiUrl = 'http://127.0.0.1:8000/api/fantasma/'
 
 
-const PaginaTierra = () => {
+const PaginaFantasma = () => {
 
     const [pokemon, setPokemon] = useState([])
 
@@ -51,20 +52,20 @@ const PaginaTierra = () => {
                         <FiltroTipos />
                     </div>
                 </div>
-                <div>
-                <div className="gridBadges">
+                    <div>
+                    <div className="gridBadges">
                         {pokemon.map((element)=>
                         {
                             return <BadgePrincipal
                                     pokemones = {element}
                             />
                         })}
-                    </div> 
-                    
-                </div>
+                    </div>  
+                        
+                    </div>
             </div>
         </div>
     )
 }
 
-export default PaginaTierra
+export default PaginaFantasma

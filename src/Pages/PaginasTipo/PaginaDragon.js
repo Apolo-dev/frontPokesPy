@@ -1,11 +1,40 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
 import Logo from '../../Images/logo.jpg'
 import FiltroTipos from '../../Components/FiltroTipos'
+import BadgePrincipal from '../../Components/BadgePrincipal'
+
+const ApiUrl = 'http://127.0.0.1:8000/api/dragon/'
+
+
 
 const PaginaDragon = () => {
+
+    const [pokemon, setPokemon] = useState([])
+
+    const getPokemones = async ()=>
+    {
+        try
+        {
+            const res = await fetch(ApiUrl)
+            const data = await res.json()
+            console.log(data);
+            setPokemon(data)
+        }catch(error)
+        {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>
+    {
+        return getPokemones()
+    }, [])
+
+    
+
 
 
     return (
@@ -27,7 +56,12 @@ const PaginaDragon = () => {
                 </div>
                 <div>
                     <div className="gridBadges">
-                        olis
+                        {pokemon.map((element)=>
+                        {
+                            return <BadgePrincipal
+                                    pokemones = {element}
+                            />
+                        })}
                     </div>                    
                 </div>
             </div>

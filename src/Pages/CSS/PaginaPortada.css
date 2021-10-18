@@ -26,6 +26,15 @@
     
 }
 
+.tamañoMensajeBienvenida
+{
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 15px;
+    color: rgb(10, 10, 95);
+}
+
+
 .tamñoTii img
 {
     width: 240px;

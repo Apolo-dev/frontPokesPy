@@ -24,6 +24,9 @@ const FiltroPortada = ({filtro, handleClickBoton}) => {
                                 <Link to="portada/dragon">Dragon</Link>
                             </li>
                             <li>
+                                <Link to="portada/psiquico">Psiquico</Link>
+                            </li>
+                            <li>
                                 <Link to="portada/hielo">Hielo</Link>
                             </li>
                             <li>
@@ -31,6 +34,15 @@ const FiltroPortada = ({filtro, handleClickBoton}) => {
                             </li>
                             <li>
                                 <Link to="portada/electrico">Electrico</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/lucha">Lucha</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/agua">Agua</Link>
+                            </li>
+                            <li>
+                                <Link to="portada/fantasma">Fantasma</Link>
                             </li>
                         </ul>
                     </div>

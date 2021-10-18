@@ -42,6 +42,12 @@ const FiltroTipos = () => {
                         <li>
                             <Link to="lucha">Lucha</Link>
                         </li>
+                        <li>
+                            <Link to="agua">Agua</Link>
+                        </li>
+                        <li>
+                            <Link to="fantasma">Fantasma</Link>
+                        </li>
                     </ul>
             </div>
             

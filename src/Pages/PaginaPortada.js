@@ -64,8 +64,8 @@ const PaginaPortada = () => {
             </div>
             <div className="gridSEparaPortada">
                 <div className="GridseparaTitPortada">
-                    <div className="tamaLogoPortada">
-                        
+                    <div className="tamañoMensajeBienvenida">
+                        Bienvenido Juan
                     </div>
                     <div className="tamñoTii">
                         <img src={Logo} alt="logo" />

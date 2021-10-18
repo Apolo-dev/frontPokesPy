@@ -16,6 +16,8 @@ import PaginaPsiquico from './Pages/PaginasTipo/PaginaPsiquico';
 import PaginaAgua from './Pages/PaginasTipo/PaginaAgua';
 import PaginaLucha from './Pages/PaginasTipo/PaginaLucha';
 import PaginaVolador from './Pages/PaginasTipo/PaginaVolador';
+import PaginaFantasma from './Pages/PaginasTipo/PaginaFantasma';
+
 import PaginaBatalla from './Pages/PaginaBatalla';
 
 
@@ -39,6 +41,7 @@ function App() {
         <Route exact path="/portada/agua" component={PaginaAgua} />
         <Route exact path="/portada/lucha" component={PaginaLucha} />
         <Route exact path="/portada/volador" component={PaginaVolador} />
+        <Route exact path="/portada/fantasma" component={PaginaFantasma} />
 
       </Switch>
     </BrowserRouter>
