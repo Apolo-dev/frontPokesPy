@@ -22,31 +22,31 @@ const FiltroTipos = () => {
                 <div className="conteListaTipos">
                     <ul>
                         <li>
-                            <Link to="fuego">Fuego</Link>
+                            <Link to="agua">Agua</Link>
                         </li>
                         <li>
                             <Link to="dragon">Dragon</Link>
                         </li>
                         <li>
-                            <Link to="psiquico">Psiquico</Link>
+                            <Link to="electrico">Electrico</Link>
+                        </li>
+                        <li>
+                            <Link to="fantasma">Fantasma</Link>
+                        </li>
+                        <li>
+                            <Link to="fuego">Fuego</Link>
                         </li>
                         <li>
                             <Link to="hielo">Hielo</Link>
                         </li>
                         <li>
-                            <Link to="tierra">Tierra</Link>
-                        </li>
-                        <li>
-                            <Link to="electrico">Electrico</Link>
-                        </li>
-                        <li>
                             <Link to="lucha">Lucha</Link>
                         </li>
                         <li>
-                            <Link to="agua">Agua</Link>
-                        </li>
+                            <Link to="psiquico">Psiquico</Link>
+                        </li>                
                         <li>
-                            <Link to="fantasma">Fantasma</Link>
+                            <Link to="tierra">Tierra</Link>
                         </li>
                         <li>
                             <Link to="volador">Volador</Link>

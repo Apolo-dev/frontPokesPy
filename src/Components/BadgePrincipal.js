@@ -3,6 +3,13 @@ import './Styles/BadgePrincipal.css'
 
 
 const BadgePrincipal = ({pokemones}) => {
+
+    const handleClick = ()=>
+    {
+        alert('has elegido a gengar, faltan 5')
+    }
+
+
     return (
         <div className="badgePrincipal">
             <div className="tamañoIMagenbadgeprinc">
@@ -15,7 +22,7 @@ const BadgePrincipal = ({pokemones}) => {
                 <strong>Tipo: </strong>{pokemones.type_pokemon}
             </div>
             <div className="jbhhj">
-                <button className="botonBadgepRINCIPAL">
+                <button className="botonBadgepRINCIPAL" onClick={handleClick}>
                     Elegir
                 </button>
             </div>

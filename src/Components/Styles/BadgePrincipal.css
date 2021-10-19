@@ -3,6 +3,8 @@
 {
     border: 1px solid rgb(211, 211, 211);
     margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
 }
 
 .tamañoIMagenbadgeprinc
@@ -50,7 +52,7 @@
     color: white;
     height: 35px;
     border: 1px solid rgb(219, 219, 219);
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
     
 }
