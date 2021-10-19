@@ -48,6 +48,9 @@ const FiltroTipos = () => {
                         <li>
                             <Link to="fantasma">Fantasma</Link>
                         </li>
+                        <li>
+                            <Link to="volador">Volador</Link>
+                        </li>
                     </ul>
             </div>
             
