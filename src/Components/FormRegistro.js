@@ -1,6 +1,8 @@
 import React from 'react'
 import './Styles/FormRegistro.css'
 
+import { Link } from 'react-router-dom'
+
 
 const FormRegistro = ({nameUser, email, password, password2, handleChange, handleSubmit}) => {
     return (
@@ -19,6 +21,7 @@ const FormRegistro = ({nameUser, email, password, password2, handleChange, handl
                             name="nameUser"
                             value={nameUser}
                             onChange={handleChange}
+                            autoFocus
                         
                         />
                     </div>
@@ -51,7 +54,7 @@ const FormRegistro = ({nameUser, email, password, password2, handleChange, handl
                     </div>
                     <div className="otravolaref">
                         <label htmlFor="">Ya tengo una cuenta</label>
-                        <a href="/login">Ir al Login</a>
+                        <Link to="/login">Ir al Login</Link>
                     </div>
                     <div className="bottonnEnviar">
                         <button>
