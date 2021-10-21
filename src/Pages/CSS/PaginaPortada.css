@@ -42,9 +42,19 @@
     
 }
 
+.gridTextoFiltroPortada
+{
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+
+
+
 .estilodFiltroPortada
 {
-    margin-top: 50px;
+    margin-top: 40px;
+    
 }
 
 

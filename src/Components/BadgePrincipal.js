@@ -2,12 +2,9 @@ import React from 'react'
 import './Styles/BadgePrincipal.css'
 
 
-const BadgePrincipal = ({pokemones}) => {
+const BadgePrincipal = ({pokemones, handleClick}) => {
 
-    const handleClick = ()=>
-    {
-        alert('has elegido a gengar, faltan 5')
-    }
+    
 
 
     return (

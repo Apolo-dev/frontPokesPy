@@ -5,6 +5,7 @@ import '../CSS/PaginasTipo/PaginaFuego.css'
 import FiltroTipos from '../../Components/FiltroTipos'
 import Logo from '../../Images/logo.jpg'
 import BadgePrincipal from '../../Components/BadgePrincipal'
+import ModalPortada from '../../Components/ModalPortada'
 
 const ApiUrl = 'http://127.0.0.1:8000/api/agua/'
 
@@ -12,6 +13,11 @@ const ApiUrl = 'http://127.0.0.1:8000/api/agua/'
 const PaginaAgua = () => {
 
     const [pokemon, setPokemon] = useState([])
+
+
+    // para manejar la modal
+    const [modal, setModal] = useState(false)
+
 
     const getPokemones = async ()=>
     {
@@ -32,6 +38,11 @@ const PaginaAgua = () => {
         return getPokemones()
     }, [])
 
+    const handleClick = ()=>
+    {
+        setModal(!modal)
+    }
+
 
 
     return (
@@ -51,12 +62,21 @@ const PaginaAgua = () => {
                         <FiltroTipos />
                     </div>
                 </div>
+                {modal &&
+                    <>
+                    <ModalPortada
+                    />
+                    </>
+                }
+                
                 <div>
                     <div className="gridBadges">
                         {pokemon.map((element)=>
                         {
                             return <BadgePrincipal
                                     pokemones = {element}
+                                    handleClick = {handleClick}
+
                             />
                         })}
                     </div>
