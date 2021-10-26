@@ -70,3 +70,8 @@
     color: white;
     text-decoration: none;
 }
+
+.absolutLista ul li a:focus
+{
+    color: grey;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Styles/FormLogin.css'
 
-const FormLogin = ({email, password, handleChange, handleSubmit}) => {
+const FormLogin = ({username, password, handleChange, handleSubmit}) => {
     return (
         <div className="generalFormLogin">
             <div className="tituloFormLogin">
@@ -9,11 +9,11 @@ const FormLogin = ({email, password, handleChange, handleSubmit}) => {
             </div>
             <form className="clasFormLogin" onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="">Email</label>
+                    <label htmlFor="">Username</label>
                     <input
-                        type="email"
-                        name="email"
-                        value={email}
+                        type="text"
+                        name="username"
+                        value={username}
                         onChange={handleChange}
                         />
                 </div>

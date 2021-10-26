@@ -52,7 +52,7 @@ const PaginaPortada = () => {
 
     const handleClick = ()=>
     {
-        
+        console.log('algo');
     }
 
 

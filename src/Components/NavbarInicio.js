@@ -6,7 +6,7 @@ const NavbarInicio = () => {
         <div className="contenedornav">
             <ul>
                 <li>
-                    <a href="/portada" >Login</a>
+                    <a href="/login" >Login</a>
                 </li>
                 <li>
                     <a href="/registro">Registro</a>
