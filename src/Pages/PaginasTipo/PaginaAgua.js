@@ -25,7 +25,6 @@ const PaginaAgua = () => {
         {
             const res = await fetch(ApiUrl)
             const data = await res.json()
-            console.log(data);
             setPokemon(data)
         }catch(error)
         {
@@ -39,6 +38,16 @@ const PaginaAgua = () => {
     }, [])
 
     const handleClick = ()=>
+    {
+        setModal(!modal)
+    }
+
+    const handleClickModal = ()=>
+    {
+        setModal(!modal)
+    }
+
+    const handleClickEliminar = ()=>
     {
         setModal(!modal)
     }
@@ -65,7 +74,8 @@ const PaginaAgua = () => {
                 {modal &&
                     <>
                     <ModalPortada
-                    />
+                        handleClickModal = {handleClickModal}
+                        handleClickEliminar={handleClickEliminar} />
                     </>
                 }
                 

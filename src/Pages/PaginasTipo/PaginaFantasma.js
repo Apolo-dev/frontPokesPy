@@ -20,7 +20,6 @@ const PaginaFantasma = () => {
         {
             const res = await fetch(ApiUrl)
             const data = await res.json()
-            console.log(data);
             setPokemon(data)
         }catch(error)
         {

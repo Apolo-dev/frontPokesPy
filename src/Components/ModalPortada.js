@@ -3,7 +3,7 @@ import './Styles/ModalPortada.css'
 
 import golem from '../Images/Golem.jpg'
 
-const ModalPortada = ({handleClickModal}) => {
+const ModalPortada = ({handleClickModal, handleClickEliminar}) => {
 
     const handleClickImagen = ()=>
     {
@@ -51,7 +51,7 @@ const ModalPortada = ({handleClickModal}) => {
                                 </button>
                             </div>
                             <div>
-                                <button className="BotonRechazarModal">
+                                <button className="BotonRechazarModal" onClick = {handleClickEliminar}>
                                     Eliminar
                                 </button>
                             </div>

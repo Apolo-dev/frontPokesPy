@@ -4,7 +4,7 @@ import './Styles/FormRegistro.css'
 import { Link } from 'react-router-dom'
 
 
-const FormRegistro = ({nameUser, email, password, password2, handleChange, handleSubmit}) => {
+const FormRegistro = ({nameUser,userName, email, password, password2, handleChange, handleSubmit}) => {
     return (
         <div className="estiloGeneralFormRegistro">
             <div className="tituloForrr">
@@ -15,13 +15,24 @@ const FormRegistro = ({nameUser, email, password, password2, handleChange, handl
             <div className="cuerpoforrr">
                 <form  className="formGennee" onSubmit={handleSubmit}>
                     <div className="inputformgenn">
-                        <label htmlFor="" className="mejorarlaleib">Name User</label>
+                        <label htmlFor="" className="mejorarlaleib">Name</label>
                         <input 
                             type="text" 
                             name="nameUser"
                             value={nameUser}
                             onChange={handleChange}
-                            autoFocus
+                            
+                        
+                        />
+                    </div>
+                    <div className="inputformgenn">
+                        <label htmlFor="" className="mejorarlaleib">UserName</label>
+                        <input 
+                            type="text" 
+                            name="userName"
+                            value={userName}
+                            onChange={handleChange}
+                            
                         
                         />
                     </div>

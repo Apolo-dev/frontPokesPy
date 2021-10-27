@@ -21,11 +21,35 @@
     cursor: pointer;
 }
 
+.gridcajaFiltroPr
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    width: 80%;
+
+}
+
+.tamañologoabajo
+{
+    background: rgb(3, 3, 48);
+    height: 30px;
+    width: 50px;
+    margin-top: 1px;
+}
+
+.tamañologoabajo img
+{
+    width: 70%;
+    height: 70%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 
 .estilosCaja 
 {
     border: 1px solid rgb(226, 226, 226);
-    width: 60%;
+    width: 100%;
     height: 30px;
     cursor: pointer;
     background-color: rgb(3, 3, 48);
@@ -69,6 +93,7 @@
 {
     color: white;
     text-decoration: none;
+    padding-right: 100px;
 }
 
 .absolutLista ul li a:focus

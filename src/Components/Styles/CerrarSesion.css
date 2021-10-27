@@ -1,0 +1,13 @@
+
+.textoCerrarSESeion
+{
+    width: 100px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.textoCerrarSESeion:hover
+{
+    color: red;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Styles/NavbarGeneral.css'
+import CerrarSesion from './CerrarSesion'
 
 import { Link } from 'react-router-dom'
 
@@ -17,7 +18,7 @@ const NavbarGeneral = () => {
                     <Link to="/batalla">Batalla</Link>
                 </li>
                 <li>
-                    <Link to="/">Cerrar Sesion</Link>
+                    <CerrarSesion />
                 </li>
             </ul>
         </div>

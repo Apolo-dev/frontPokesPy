@@ -2,21 +2,54 @@ import React, {useState} from 'react'
 import FormRegistro from '../Components/FormRegistro'
 import './CSS/PaginaRegistro.css'
 
+import { useHistory } from 'react-router'
+
 import imagenn from '../Images/registro.jpg'
 
 const PaginaRegistro = () => {
 
+    const history = useHistory()
+
+    const ApiUrl = 'http://127.0.0.1:8000/api/registrar/'
 
     const [nameUser, setNameUser] = useState('')
+    const [userName, setUserName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [password2, setPassword2] = useState('')
+
+    
+    const registo = async ()=>
+    {
+        return await fetch(ApiUrl, 
+            {
+                method: 'POST',
+                headers: 
+                {
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(
+                    {
+                        "name": String(nameUser).trim(),
+                        "username": String(userName).trim(),
+                        "email": String(email).trim(),
+                        "password": String(password).trim()
+                    })
+            })
+    }
+
+
+    
 
     const handleChange = (e)=>
     {
         if(e.target.name === 'nameUser')
         {
             setNameUser(e.target.value)
+        }
+        else if(e.target.name === 'userName')
+        {
+            setUserName(e.target.value)
         }
         else if(e.target.name === 'email')
         {
@@ -36,9 +69,21 @@ const PaginaRegistro = () => {
         }
     }
 
-    const handleSubmit = (e)=>
+    const handleSubmit = async (e)=>
     {
         e.preventDefault()
+
+        try
+        {
+            let res;
+            res = await registo()
+            const data = await res.json()
+            console.log(data.user.username);
+            
+        }catch(error)
+        {
+            console.log(error);
+        }
         
         
 
@@ -67,15 +112,12 @@ const PaginaRegistro = () => {
             return
         }
 
-        console.log(nameUser, email, password, password2);
-
-
-
-
         setNameUser('')
+        setUserName('')
         setEmail('')
         setPassword('')
         setPassword2('')
+        history.push('portada')
     }
 
 
@@ -94,6 +136,7 @@ const PaginaRegistro = () => {
             <div className="cuerpoFormm">
                 <FormRegistro
                 nameUser = {nameUser}
+                userName={userName}
                 email = {email}
                 password = {password}
                 password2 = {password2}

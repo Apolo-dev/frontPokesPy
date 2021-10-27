@@ -2,6 +2,7 @@ import React from 'react'
 import './Styles/FiltroPortada.css'
 
 import { Link } from 'react-router-dom'
+import logoAbajo from '../Images/logoAbajo.png'
 
 const FiltroPortada = ({filtro, handleClickBoton}) => {
     
@@ -9,8 +10,13 @@ const FiltroPortada = ({filtro, handleClickBoton}) => {
     return (
         <div className="generalFiltroPortada">
             
-            <div className="estilosCaja" onClick={handleClickBoton}>
-                <h2>Principal</h2>
+            <div className="gridcajaFiltroPr">
+                <div className="estilosCaja" onClick={handleClickBoton}>
+                    <h2>Principal</h2>
+                </div>
+                <div className="tamañologoabajo" >
+                    <img src={logoAbajo} alt="logoabajo" />
+                </div>
             </div>
             <div >
             {
