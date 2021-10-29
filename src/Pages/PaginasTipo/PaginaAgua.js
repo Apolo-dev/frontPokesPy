@@ -14,7 +14,6 @@ const PaginaAgua = () => {
 
     const [pokemon, setPokemon] = useState([])
 
-
     // para manejar la modal
     const [modal, setModal] = useState(false)
 
@@ -25,12 +24,15 @@ const PaginaAgua = () => {
         {
             const res = await fetch(ApiUrl)
             const data = await res.json()
+            console.log(data);
             setPokemon(data)
         }catch(error)
         {
             console.log(error);
         }
     }
+
+    
 
     useEffect(()=>
     {
@@ -86,6 +88,7 @@ const PaginaAgua = () => {
                             return <BadgePrincipal
                                     pokemones = {element}
                                     handleClick = {handleClick}
+
 
                             />
                         })}

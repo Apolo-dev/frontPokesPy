@@ -64,7 +64,6 @@ const PaginaLogin = () => {
             {
                 alert('El usuario no tiene una cuenta')
             }
-           
         }catch(error)
         {
             console.log(error);

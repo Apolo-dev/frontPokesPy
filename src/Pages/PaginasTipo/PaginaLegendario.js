@@ -1,18 +1,22 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import NavbarGeneral from '../../Components/NavbarGeneral'
 import '../CSS/PaginasTipo/PaginaFuego.css'
 
-import Logo from '../../Images/logo.jpg'
 import FiltroTipos from '../../Components/FiltroTipos'
+import Logo from '../../Images/logo.jpg'
 import BadgePrincipal from '../../Components/BadgePrincipal'
+import ModalPortada from '../../Components/ModalPortada'
 
-const ApiUrl = 'http://127.0.0.1:8000/api/dragon/'
+const ApiUrl = 'http://127.0.0.1:8000/api/legendario/'
 
 
-
-const PaginaDragon = () => {
+const PaginaLegendario = () => {
 
     const [pokemon, setPokemon] = useState([])
+
+    // para manejar la modal
+    const [modal, setModal] = useState(false)
+
 
     const getPokemones = async ()=>
     {
@@ -20,6 +24,7 @@ const PaginaDragon = () => {
         {
             const res = await fetch(ApiUrl)
             const data = await res.json()
+            console.log(data);
             setPokemon(data)
         }catch(error)
         {
@@ -27,15 +32,26 @@ const PaginaDragon = () => {
         }
     }
 
+    
+
     useEffect(()=>
     {
         return getPokemones()
     }, [])
 
-
     const handleClick = ()=>
     {
-        console.log('voy a individualizarlo');
+        setModal(!modal)
+    }
+
+    const handleClickModal = ()=>
+    {
+        setModal(!modal)
+    }
+
+    const handleClickEliminar = ()=>
+    {
+        setModal(!modal)
     }
 
 
@@ -57,6 +73,14 @@ const PaginaDragon = () => {
                         <FiltroTipos />
                     </div>
                 </div>
+                {modal &&
+                    <>
+                    <ModalPortada
+                        handleClickModal = {handleClickModal}
+                        handleClickEliminar={handleClickEliminar} />
+                    </>
+                }
+                
                 <div>
                     <div className="gridBadges">
                         {pokemon.map((element)=>
@@ -64,13 +88,15 @@ const PaginaDragon = () => {
                             return <BadgePrincipal
                                     pokemones = {element}
                                     handleClick = {handleClick}
+
+
                             />
                         })}
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default PaginaDragon
+export default PaginaLegendario

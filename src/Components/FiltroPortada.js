@@ -55,6 +55,9 @@ const FiltroPortada = ({filtro, handleClickBoton}) => {
                             <li>
                                 <Link to="portada/volador">Volador</Link>
                             </li>
+                            <li>
+                                <Link to="portada/legendario">Legendario</Link>
+                            </li>
                         </ul>
                     </div>
 

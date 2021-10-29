@@ -51,6 +51,9 @@ const FiltroTipos = () => {
                         <li>
                             <Link to="volador">Volador</Link>
                         </li>
+                        <li>
+                            <Link to="legendario">Legendario</Link>
+                        </li>
                     </ul>
             </div>
             

@@ -17,34 +17,42 @@ import PaginaAgua from './Pages/PaginasTipo/PaginaAgua';
 import PaginaLucha from './Pages/PaginasTipo/PaginaLucha';
 import PaginaVolador from './Pages/PaginasTipo/PaginaVolador';
 import PaginaFantasma from './Pages/PaginasTipo/PaginaFantasma';
+import PaginaLegendario from './Pages/PaginasTipo/PaginaLegendario';
 
 import PaginaBatalla from './Pages/PaginaBatalla';
+
+import {AuthProvider} from './contextos/AuthContext'
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={PaginaInicio} />
-        <Route exact path="/registro" component={PaginaRegistro} />
-        <Route exact path="/equipos" component={PaginaEquipos} />
-        <Route exact path="/batalla" component={PaginaBatalla} />
-        <Route exact path="/portada" component={PaginaPortada} />
-        <Route exact path="/login" component={PaginaLogin} />
 
-        <Route exact path="/portada/fuego" component={PaginaFuego} />
-        <Route exact path="/portada/dragon" component={PaginaDragon} />
-        <Route exact path="/portada/electrico" component={PaginaElectrico} />
-        <Route exact path="/portada/tierra" component={PaginaTierra} />
-        <Route exact path="/portada/hielo" component={PaginaHielo} />
-        <Route exact path="/portada/psiquico" component={PaginaPsiquico} />
-        <Route exact path="/portada/agua" component={PaginaAgua} />
-        <Route exact path="/portada/lucha" component={PaginaLucha} />
-        <Route exact path="/portada/volador" component={PaginaVolador} />
-        <Route exact path="/portada/fantasma" component={PaginaFantasma} />
+    <AuthProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={PaginaInicio} />
+          <Route exact path="/registro" component={PaginaRegistro} />
+          <Route exact path="/equipos" component={PaginaEquipos} />
+          <Route exact path="/batalla" component={PaginaBatalla} />
+          <Route exact path="/portada" component={PaginaPortada} />
+          <Route exact path="/login" component={PaginaLogin} />
 
-      </Switch>
-    </BrowserRouter>
+          <Route exact path="/portada/fuego" component={PaginaFuego} />
+          <Route exact path="/portada/dragon" component={PaginaDragon} />
+          <Route exact path="/portada/electrico" component={PaginaElectrico} />
+          <Route exact path="/portada/tierra" component={PaginaTierra} />
+          <Route exact path="/portada/hielo" component={PaginaHielo} />
+          <Route exact path="/portada/psiquico" component={PaginaPsiquico} />
+          <Route exact path="/portada/agua" component={PaginaAgua} />
+          <Route exact path="/portada/lucha" component={PaginaLucha} />
+          <Route exact path="/portada/volador" component={PaginaVolador} />
+          <Route exact path="/portada/fantasma" component={PaginaFantasma} />
+          <Route exact path="/portada/legendario" component={PaginaLegendario} />
+        </Switch>
+      </BrowserRouter>
+    </AuthProvider>
+
+    
     
   );
 }

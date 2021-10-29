@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import NavbarGeneral from '../Components/NavbarGeneral'
 import './CSS/PaginaPortada.css'
+import {useAuth} from '../contextos/AuthContext'
 
 import Arcanine from '../Images/Arcanine.jpg'
 import Altaria from '../Images/Altaria.jpg'
@@ -42,6 +43,9 @@ import FiltroPortada from '../Components/FiltroPortada'
 
 
 const PaginaPortada = () => {
+
+    const {usuario} = useAuth()
+    console.log(usuario);
 
     const [filtro, setFiltro] = useState(false)
 
