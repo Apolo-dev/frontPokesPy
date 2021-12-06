@@ -78,7 +78,7 @@ const PaginaRegistro = () => {
             let res;
             res = await registo()
             const data = await res.json()
-            console.log(data.user.username);
+            console.log(data);
             
         }catch(error)
         {
